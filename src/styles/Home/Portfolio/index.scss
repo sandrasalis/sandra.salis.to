@@ -3,9 +3,6 @@
 
 .PortfolioItem {
   display: flex;
-  cursor: pointer;
-
-  
 
   @include desktop {
     &:not(:last-child) {
