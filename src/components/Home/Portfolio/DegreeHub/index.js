@@ -20,12 +20,14 @@ const DegreeHub = ({}) => {
           onEvent={(event) => {
             if (event === "load") {
               create({
-                mode: "cursor",
+                mode: "scroll",
                 player: lottiePlayer,
                 container: rootRef.current,
                 actions: [
                   {
-                    type: "pauseHold"
+                    visibility: [0, 1],
+                    type: "seek",
+                    frames: [50, 450]
                   }
                 ]
               });

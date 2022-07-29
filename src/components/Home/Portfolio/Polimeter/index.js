@@ -18,21 +18,22 @@ const Polimeter = ({}) => {
             setLottiePlayer(instance)
           }}
           onEvent={(event) => {
-          if (event === "load") {
-            create({
-              mode: "cursor",
-              player: lottiePlayer,
-              container: rootRef.current,
-              actions: [
-                {
-                  type: "pauseHold"
-                }
-              ]
-            });
-          }
-        }}
+            if (event === "load") {
+              create({
+                mode: "scroll",
+                player: lottiePlayer,
+                container: rootRef.current,
+                actions: [
+                  {
+                    visibility: [0, 1],
+                    type: "seek",
+                    frames: [0, 159]
+                  }
+                ]
+              });
+            }
+          }}
           autoplay={ false }
-          loop={ true }
           controls={ false }
           src={ animationData }
         />

@@ -36,16 +36,19 @@ const Layout = ({ children }) => {
           { children }
         </main>
         <footer>
-          <nav className="navbar is-light">
-            <div className="navbar-brand">
-              <div className="navbar-item">
-                <StaticImage 
-                  src="../images/sailias.png" 
-                  alt="Jon Salis"
-                />
-              </div>
-              <div className="navbar-item">
-                Jon Salis
+          <nav className="navbar is-mobile is-light">
+            <div className="container">
+              <div className="navbar-brand">
+                <div className="navbar-item">
+                  <StaticImage 
+                    src="../images/sailias.png" 
+                    alt="Jon Salis"
+                    style={ {width: "28px", height: "28px"} }
+                  />
+                </div>
+                <div className="navbar-item">
+                  Jon Salis
+                </div>
               </div>
             </div>
           </nav>
