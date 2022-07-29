@@ -40,8 +40,8 @@ const Layout = ({ children }) => {
             <div className="container">
               <div className="navbar-brand">
                 <div className="navbar-item">
-                  <StaticImage 
-                    src="../images/sailias.png" 
+                  <img 
+                    src={ require("src/images/sailias.png").default }
                     alt="Jon Salis"
                     style={ {width: "28px", height: "28px"} }
                   />
