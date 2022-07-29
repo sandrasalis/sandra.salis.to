@@ -26,7 +26,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "sass": "^1.54.0",
-    "gatsby-plugin-fontawesome-css": "ed-wright/gatsby-plugin-fontawesome-css#update-peer-dependencies"
+    "gatsby-plugin-fontawesome-css": "sailias/gatsby-plugin-fontawesome-css"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
