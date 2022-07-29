@@ -69,7 +69,9 @@ const Idap = ({}) => {
           Features
         </h4>
         <ul>
-          <li>High performant, measured in Requests per minute per core.</li>
+          <li>Server response times less than 5ms under heavy load</li>
+          <li>Capable of supporting 200,000+ requests per minute (RPM)</li>
+          <li>Capacity able to be measured in RPM per core.</li>
           <li>Cross region deployments</li>
           <li>User data processing with custom deployed R servers or serverless Python functions</li>
           <li>Multi-tenant CMS</li>
