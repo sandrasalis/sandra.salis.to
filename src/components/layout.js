@@ -1,16 +1,21 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import * as React from "react"
+// NPM
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-import Header from "./header"
-import "./layout.css"
+// Components
+import Header from "src/components/Header"
+
+// Styles
+import "src/styles/index.scss"
+
+// Font Awesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add(fas)
+library.add(fab)
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,23 +31,24 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <div>
+        <main>
+          { children }
+        </main>
+        <footer>
+          <nav className="navbar is-light">
+            <div className="navbar-brand">
+              <div className="navbar-item">
+                <StaticImage 
+                  src="../images/sailias.png" 
+                  alt="Jon Salis"
+                />
+              </div>
+              <div className="navbar-item">
+                Jon Salis
+              </div>
+            </div>
+          </nav>
         </footer>
       </div>
     </>

@@ -1,0 +1,38 @@
+.Hero {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.Hero__title {
+  font-family: NotoSerif;
+
+  @include desktop {
+    font-size: 76px;
+  } 
+
+  @include touch {
+    font-size: 46px;
+  } 
+}
+
+.Hero__subtitle {
+  @include desktop {
+    font-size: 24px;
+    margin-top: 25px;
+  }
+
+  @include touch {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+}
+
+.Hero__contact {
+  margin-top: 20px;
+
+  a {
+    color: #777;
+    font-size: 28px;
+    margin-right: 25px;
+  }
+}

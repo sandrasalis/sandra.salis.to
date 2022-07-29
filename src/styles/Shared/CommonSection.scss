@@ -1,0 +1,22 @@
+.CommonSection {
+  @include desktop {
+    &:not(:first-child) {
+      margin-top: 100px;
+    }
+  }
+
+  @include touch {
+    &:not(:first-child) {
+      margin-top: 50px;
+    }
+  }
+}
+
+.CommonSection__title {
+  font-family: PoppinsBold;
+
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
