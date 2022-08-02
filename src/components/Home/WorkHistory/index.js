@@ -1,7 +1,7 @@
 // NPM
 import React from 'react'
 
-const WorkHistory = () => {
+const WorkHistory = ({ expanded }) => {
 
   return (
     <section className="WorkHistory CommonSection">
@@ -14,6 +14,12 @@ const WorkHistory = () => {
           <a href="https://www.voxpoplabs.com" target="_blank">
             Vox Pop Labs
           </a>
+          {
+            expanded && 
+              <small className="WorkHistory__link-content">
+                { `https://www.voxpoplabs.com` }
+              </small>
+          }
         </h4>
         <h5 className="WorkHistory__title">
           Chief Technology Officer / Technical Lead
@@ -28,6 +34,12 @@ const WorkHistory = () => {
           <a href="https://lighthouselabs.ca" target="_blank">
             Lighthouse Labs Coding School
           </a>
+          {
+            expanded && 
+              <small className="WorkHistory__link-content">
+                { `https://lighthouselabs.ca` }
+              </small>
+          }
         </h4>
         <h5 className="WorkHistory__title">
           Web Instructor / Lecturer

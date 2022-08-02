@@ -36,3 +36,29 @@
     margin-right: 25px;
   }
 }
+
+.Hero__link-content {
+  display: none;
+}
+
+.Hero.expanded {
+  .Hero__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    a {
+      margin-right: 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+  }
+
+  .Hero__link-content {
+    font-family: Poppins;
+    display: block;
+    margin-left: 25px;
+    font-size: 18px;
+  }
+}

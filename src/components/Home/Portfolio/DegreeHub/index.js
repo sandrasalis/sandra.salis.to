@@ -6,7 +6,7 @@ import { create } from '@lottiefiles/lottie-interactivity';
 // Constants
 import animationData from './animationData';
 
-const DegreeHub = ({}) => {
+const DegreeHub = ({ expanded }) => {
   const rootRef = useRef(null)
   const [lottiePlayer, setLottiePlayer] = useState(null)
 
@@ -43,6 +43,12 @@ const DegreeHub = ({}) => {
           <a href="https://degreehub.macleans.ca" target="_blank">
             Degree Hub
           </a>
+          {
+            expanded && 
+              <small className="PortfolioItem__link-content">
+                { `https://degreehub.macleans.ca` }
+              </small>
+          }
         </h4>
 
         <p className="PortfolioItem__content-description">

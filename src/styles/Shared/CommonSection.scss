@@ -1,15 +1,5 @@
 .CommonSection {
-  @include desktop {
-    &:not(:first-child) {
-      margin-top: 100px;
-    }
-  }
-
-  @include touch {
-    &:not(:first-child) {
-      margin-top: 50px;
-    }
-  }
+  margin-top: 50px;
 }
 
 .CommonSection__title {
@@ -19,4 +9,10 @@
   border-bottom: 1px solid #DDD;
   font-size: 24px;
   margin-bottom: 50px;
+}
+
+.CommonSection.expanded {
+  @include desktop {
+    margin-top: 0px;
+  }
 }

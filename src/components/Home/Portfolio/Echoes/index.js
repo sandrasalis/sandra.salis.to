@@ -6,7 +6,7 @@ import { create } from '@lottiefiles/lottie-interactivity';
 // Constants
 import animationData from './animationData';
 
-const Echoes = ({}) => {
+const Echoes = ({ expanded }) => {
   const rootRef = useRef(null)
   const [lottiePlayer, setLottiePlayer] = useState(null)
 
@@ -43,6 +43,12 @@ const Echoes = ({}) => {
           <a href="https://echoes.cbc.ca" target="_blank">
             Echoes
           </a>
+          {
+            expanded && 
+              <small className="PortfolioItem__link-content">
+                { `https://echoes.cbc.ca` }
+              </small>
+          }
         </h4>
 
         <p className="PortfolioItem__content-description">

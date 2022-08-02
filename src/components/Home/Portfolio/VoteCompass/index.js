@@ -6,7 +6,7 @@ import { create } from '@lottiefiles/lottie-interactivity';
 // Constants
 import animationData from './animationData';
 
-const VoteCompass = ({}) => {
+const VoteCompass = ({ expanded }) => {
   const rootRef = useRef(null)
   const [lottiePlayer, setLottiePlayer] = useState(null)
 
@@ -43,6 +43,12 @@ const VoteCompass = ({}) => {
           <a href="https://votecompass.cbc.ca" target="_blank">
             Vote Compass
           </a>
+          {
+            expanded && 
+              <small className="PortfolioItem__link-content">
+                { `https://votecompass.cbc.ca` }
+              </small>
+          }
         </h4>
 
         <p className="PortfolioItem__content-description">

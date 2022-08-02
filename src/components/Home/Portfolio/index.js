@@ -8,24 +8,22 @@ import DegreeHub from "./DegreeHub"
 import Polimeter from "./Polimeter"
 import Echoes from "./Echoes"
 
-const Porfolio = ({}) => {
-
+const Portfolio = ({ expanded }) => {
   return (
-    <section className="Porfolio CommonSection">
+    <section className={ `Portfolio CommonSection ${ expanded ? "expanded" : "" }` }>
       <h3 className="CommonSection__title">
         portfolio
       </h3>
 
-      <div className="PorfolioItems">
-        <VoteCompass />
-        <Idap />
-        <DegreeHub />
-        <Polimeter />
-        <Echoes />
+      <div className="PortfolioItems">
+        <VoteCompass expanded={ expanded } />
+        <Idap expanded={ expanded } />
+        <DegreeHub expanded={ expanded }/>
+        <Polimeter expanded={ expanded } />
+        <Echoes expanded={ expanded } />
       </div>
     </section>
   )
-
 }
 
-export default Porfolio
+export default Portfolio

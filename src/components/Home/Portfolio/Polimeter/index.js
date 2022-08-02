@@ -6,7 +6,7 @@ import { create } from '@lottiefiles/lottie-interactivity';
 // Constants
 import animationData from './animationData';
 
-const Polimeter = ({}) => {
+const Polimeter = ({ expanded }) => {
   const rootRef = useRef(null)
   const [lottiePlayer, setLottiePlayer] = useState(null)
 
@@ -43,6 +43,12 @@ const Polimeter = ({}) => {
           <a href="https://www.polimeter.org/en" target="_blank">
             Polimeter
           </a>
+          {
+            expanded && 
+              <small className="PortfolioItem__link-content">
+                { `https://www.polimeter.org/en` }
+              </small>
+          }
         </h4>
 
         <p className="PortfolioItem__content-description">

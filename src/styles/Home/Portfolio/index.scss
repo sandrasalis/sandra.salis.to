@@ -68,3 +68,31 @@
   font-weight: bold;
   margin-top: 50px;
 }
+
+.Portfolio.expanded {
+  .PortfolioItem {
+    @include desktop {
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .PortfolioItem__image-holder {
+    @include desktop {
+      width: 150px;
+    }
+  }
+
+  .PortfolioItem__link-content {
+    font-family: Poppins;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+
+  .PortfolioItem__content-features-title {
+    margin-top: 25px;
+  }
+}
